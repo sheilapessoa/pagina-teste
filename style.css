@@ -1,64 +1,133 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  background: #0f172a;
-  color: #e2e8f0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-/* SIDEBAR */
-.sidebar {
-  width: 240px;
-  height: 100vh;
-  background: #020617;
-  padding: 20px;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
 }
 
-.sidebar h2 {
-  margin-bottom: 20px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.sidebar button {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  background: transparent;
-  border: none;
-  color: #cbd5f5;
-  text-align: left;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.logo-text strong { display: block; color: #009639; font-size: 1.2rem; }
+.logo-text span { font-size: 0.8rem; color: #666; }
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
-.sidebar button:hover {
-  background: #1e293b;
-  border-radius: 8px;
+/* Hero Section com o Gradiente */
+.hero {
+    height: 70vh;
+    background: linear-gradient(105deg, #009639 0%, #009639 40%, #88b131 70%, #e63928 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    color: white;
 }
 
-/* MAIN */
-.main {
-  flex: 1;
+.hero-content {
+    max-width: 600px;
 }
 
-/* TOPBAR */
-.topbar {
-  padding: 15px;
-  background: #020617;
-  border-bottom: 1px solid #1e293b;
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
 }
 
-/* CONTENT */
-.content {
-  padding: 20px;
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
 }
 
-/* CARDS */
-.card {
-  background: #020617;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+/* Botões */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-red {
+    background-color: #e63928;
+    color: white;
+}
+
+.btn-outline {
+    border: 1.5px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* Seção de Features (Rodapé Branco) */
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 8%;
+    background-color: #f9f9f9;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    flex: 1;
+}
+
+.icon-circle {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.feature-item h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .features { flex-direction: column; gap: 30px; }
+    .navbar nav { display: none; }
 }
