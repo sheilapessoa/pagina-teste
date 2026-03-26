@@ -1,19 +1,33 @@
-<!DOCTYPE html>
+<! Stein context: pt-BR -->
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Guia de Solicitações Acadêmicas</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:wght@700&family=Montserrat:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:wght@700&family=Montserrat:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Guia de Solicitações Acadêmicas">
+    <meta property="og:description" content="Uma página web interativa que apresenta um guia completo de solicitações acadêmicas, como trancamento, aproveitamento de estudos e justificativas.">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="root">
         </div>
-    <script src="script.js"></script>
+
+    <script type="module" src="script.js"></script>
+
+    <script>
+        /** * Configurações de ambiente limpas.
+         * Removemos todas as referências ao manus-analytics e global_env original.
+         */
+        window._APP_MODE = "production";
+        window._VERSION = "1.0.0";
+    </script>
 </body>
 </html>
