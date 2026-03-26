@@ -3,62 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Guia Acadêmico</title>
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f4f4f4;
-    }
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-    nav {
-      background: #34495e;
-      padding: 10px;
-    }
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
-    }
-    .container {
-      padding: 20px;
-    }
-    .card {
-      background: white;
-      padding: 15px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Guia Acadêmico</h1>
-</header>
-
-<nav>
-  <a href="#">Início</a>
-  <a href="#">Materiais</a>
-  <a href="#">Cursos</a>
-  <a href="#">Contato</a>
-</nav>
-
-<div class="container">
-  <div class="card">
-    <h2>Bem-vindo</h2>
-    <p>Seu portal acadêmico digital.</p>
-  </div>
-
-  <div class="card">
-    <h2>Materiais</h2>
-    <p>Organize aqui seus conteúdos.</p>
-  </div>
+<div class="sidebar">
+  <h2>Guia</h2>
+  <button onclick="trocarPagina('inicio')">Início</button>
+  <button onclick="trocarPagina('materiais')">Materiais</button>
+  <button onclick="trocarPagina('cursos')">Cursos</button>
 </div>
 
+<div class="content" id="content">
+  <h1>Bem-vindo</h1>
+  <p>Seu guia acadêmico digital</p>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
