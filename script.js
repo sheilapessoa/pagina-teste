@@ -1,31 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
 
-    // Simulação do conteúdo que estava no seu Guia
-    const content = `
-        <header style="padding: 40px 20px; text-align: center;">
-            <h1>Guia de Solicitações Acadêmicas</h1>
-            <p>Informações completas para sua jornada estudantil.</p>
-        </header>
+    // Dados do Guia Acadêmico (Conteúdo extraído do original)
+    const guiaData = {
+        titulo: "Guia de Solicitações Acadêmicas",
+        descricao: "Uma página interativa com informações completas sobre sua vida acadêmica.",
+        secoes: [
+            {
+                id: "trancamento",
+                titulo: "Trancamento de Matrícula",
+                texto: "O trancamento interrompe temporariamente seus estudos, mantendo seu vínculo com a instituição dentro dos prazos regulamentares.",
+                link: "#"
+            },
+            {
+                id: "aproveitamento",
+                titulo: "Aproveitamento de Estudos",
+                texto: "Permite validar componentes curriculares cursados anteriormente em outras instituições ou cursos.",
+                link: "#"
+            },
+            {
+                id: "faltas",
+                titulo: "Justificativa de Faltas",
+                texto: "Procedimento para apresentar atestados médicos ou documentos que comprovem a impossibilidade de comparecimento às atividades.",
+                link: "#"
+            },
+            {
+                id: "documentos",
+                titulo: "Emissão de Documentos",
+                texto: "Solicite declarações de matrícula, históricos escolares e outros documentos acadêmicos oficiais.",
+                link: "#"
+            }
+        ]
+    };
 
-        <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
-            <section id="trancamento" class="card">
-                <h2>Trancamento de Matrícula</h2>
-                <p>Informações sobre prazos e como proceder com a solicitação oficial.</p>
-                <a href="#" class="button-primary">Solicitar Agora</a>
-            </section>
+    // Função para gerar o HTML das seções
+    const renderContent = () => {
+        return `
+            <div class="container">
+                <header style="text-align: center; margin-bottom: 50px;">
+                    <h1>${guiaData.titulo}</h1>
+                    <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">${guiaData.descricao}</p>
+                </header>
 
-            <section id="estudos" class="card">
-                <h2>Aproveitamento de Estudos</h2>
-                <p>Saiba como validar disciplinas cursadas em outras instituições.</p>
-            </section>
+                <main>
+                    ${guiaData.secoes.map(secao => `
+                        <section id="${secao.id}" class="card">
+                            <h2>${secao.titulo}</h2>
+                            <p>${secao.texto}</p>
+                            <div style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                                <a href="${secao.link}" class="button-primary">Acessar Informações</a>
+                            </div>
+                        </section>
+                    `).join('')}
+                </main>
 
-            <section id="faltas" class="card">
-                <h2>Justificativa de Faltas</h2>
-                <p>Regras para apresentação de atestados e reposição de atividades.</p>
-            </section>
-        </main>
-    `;
+                <footer style="text-align: center; margin-top: 60px; padding: 20px; color: var(--text-tertiary); font-size: 0.8rem;">
+                    <p>© 2026 Portal Acadêmico Independente</p>
+                </footer>
+            </div>
+        `;
+    };
 
-    root.innerHTML = content;
+    // Injeta o conteúdo no HTML
+    root.innerHTML = renderContent();
 });
