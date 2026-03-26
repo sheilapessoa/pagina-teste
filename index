@@ -5,25 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Guia de Solicitações Acadêmicas</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:wght@700&family=Montserrat:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js"></script>
 </head>
 <body>
     <div id="root"></div>
-
-    <div id="app-content-root"></div>
-
-    <script>
-        // Configurações neutras para o site funcionar fora da Manus
-        window._APP_HOST_DEV = false;
-        window.__app_global_env = {
-            apiHost: '', 
-            host: window.location.origin
-        };
-    </script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
