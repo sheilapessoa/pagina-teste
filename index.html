@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Guia Acadêmico</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Ícones -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Solicitações Acadêmicas - IFRN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="sidebar">
-  <h2>📘 Guia</h2>
+    <header class="navbar">
+        <div class="logo">
+            <img src="https://via.placeholder.com/40x40/009639/ffffff?text=🎓" alt="Logo IFRN">
+            <div class="logo-text">
+                <strong>IFRN</strong>
+                <span>Guia de Solicitações Acadêmicas</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#">Serviços</a>
+            <a href="#">Avisos</a>
+            <a href="#">Sobre SUAP</a>
+        </nav>
+    </header>
 
-  <button onclick="trocarPagina('inicio')">
-    <i data-lucide="home"></i> Início
-  </button>
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Guia de Solicitações Acadêmicas</h1>
+            <p>Passo a passo para não se perder. Todas as solicitações são feitas pelo SUAP com segurança e registro formal.</p>
+            <div class="buttons">
+                <a href="#" class="btn btn-red">Explorar Serviços</a>
+                <a href="#" class="btn btn-outline">Acessar SUAP</a>
+            </div>
+        </div>
+    </main>
 
-  <button onclick="trocarPagina('materiais')">
-    <i data-lucide="book"></i> Materiais
-  </button>
+    <section class="features">
+        <div class="feature-item">
+            <div class="icon-circle"><i class="fa-regular fa-circle-check"></i></div>
+            <div>
+                <h3>Centralizado</h3>
+                <p>Todas as solicitações pelo SUAP com registro formal.</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="icon-circle"><i class="fa-solid fa-book-open"></i></div>
+            <div>
+                <h3>Manuais Completos</h3>
+                <p>Links diretos para cada procedimento.</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="icon-circle"><i class="fa-regular fa-clock"></i></div>
+            <div>
+                <h3>Praticidade</h3>
+                <p>Siga o passo a passo estruturado.</p>
+            </div>
+        </div>
+    </section>
 
-  <button onclick="trocarPagina('cursos')">
-    <i data-lucide="graduation-cap"></i> Cursos
-  </button>
-
-</div>
-
-<div class="main">
-  <div class="topbar">
-    <h1>Painel</h1>
-  </div>
-
-  <div id="content" class="content"></div>
-</div>
-
-<script src="script.js"></script>
-<script>lucide.createIcons();</script>
 </body>
 </html>
