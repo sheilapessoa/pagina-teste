@@ -1,33 +1,24 @@
-body {
-  margin: 0;
-  font-family: Arial;
-  display: flex;
-}
+function trocarPagina(pagina) {
+  const content = document.getElementById("content");
 
-.sidebar {
-  width: 220px;
-  height: 100vh;
-  background: #1e293b;
-  color: white;
-  padding: 20px;
-}
+  if (pagina === "inicio") {
+    content.innerHTML = `
+      <h1>Início</h1>
+      <p>Bem-vindo ao guia acadêmico.</p>
+    `;
+  }
 
-.sidebar button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  background: #334155;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
+  if (pagina === "materiais") {
+    content.innerHTML = `
+      <h1>Materiais</h1>
+      <p>Aqui ficam seus conteúdos.</p>
+    `;
+  }
 
-.sidebar button:hover {
-  background: #475569;
-}
-
-.content {
-  flex: 1;
-  padding: 20px;
-  background: #f1f5f9;
+  if (pagina === "cursos") {
+    content.innerHTML = `
+      <h1>Cursos</h1>
+      <p>Lista de cursos disponíveis.</p>
+    `;
+  }
 }
