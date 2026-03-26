@@ -4,21 +4,38 @@
   <meta charset="UTF-8">
   <title>Guia Acadêmico</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Ícones -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
 <div class="sidebar">
-  <h2>Guia</h2>
-  <button onclick="trocarPagina('inicio')">Início</button>
-  <button onclick="trocarPagina('materiais')">Materiais</button>
-  <button onclick="trocarPagina('cursos')">Cursos</button>
+  <h2>📘 Guia</h2>
+
+  <button onclick="trocarPagina('inicio')">
+    <i data-lucide="home"></i> Início
+  </button>
+
+  <button onclick="trocarPagina('materiais')">
+    <i data-lucide="book"></i> Materiais
+  </button>
+
+  <button onclick="trocarPagina('cursos')">
+    <i data-lucide="graduation-cap"></i> Cursos
+  </button>
+
 </div>
 
-<div class="content" id="content">
-  <h1>Bem-vindo</h1>
-  <p>Seu guia acadêmico digital</p>
+<div class="main">
+  <div class="topbar">
+    <h1>Painel</h1>
+  </div>
+
+  <div id="content" class="content"></div>
 </div>
 
 <script src="script.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>
