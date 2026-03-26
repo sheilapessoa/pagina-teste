@@ -1,24 +1,64 @@
-function trocarPagina(pagina) {
-  const content = document.getElementById("content");
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  background: #0f172a;
+  color: #e2e8f0;
+}
 
-  if (pagina === "inicio") {
-    content.innerHTML = `
-      <h1>Início</h1>
-      <p>Bem-vindo ao guia acadêmico.</p>
-    `;
-  }
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #020617;
+  padding: 20px;
+}
 
-  if (pagina === "materiais") {
-    content.innerHTML = `
-      <h1>Materiais</h1>
-      <p>Aqui ficam seus conteúdos.</p>
-    `;
-  }
+.sidebar h2 {
+  margin-bottom: 20px;
+}
 
-  if (pagina === "cursos") {
-    content.innerHTML = `
-      <h1>Cursos</h1>
-      <p>Lista de cursos disponíveis.</p>
-    `;
-  }
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  background: transparent;
+  border: none;
+  color: #cbd5f5;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar button:hover {
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+}
+
+/* TOPBAR */
+.topbar {
+  padding: 15px;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* CONTENT */
+.content {
+  padding: 20px;
+}
+
+/* CARDS */
+.card {
+  background: #020617;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
