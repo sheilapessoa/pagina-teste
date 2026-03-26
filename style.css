@@ -1,0 +1,43 @@
+:root {
+    /* Paleta de Cores Extraída */
+    --primary-blue: #0081f2;       /* Cor de destaque acadêmico */ [cite: 2268]
+    --bg-gray: #f8f8f7;            /* Fundo principal suave */ [cite: 2268]
+    --text-main: #34322d;          /* Cor do texto principal */ [cite: 2268]
+    --text-secondary: #5e5e5b;     /* Cor de textos de apoio */ [cite: 2268]
+    --border-soft: #0000000f;      /* Linhas e divisórias discretas */ [cite: 2270]
+    --card-bg: #ffffff;            /* Fundo dos cards brancos */ [cite: 2268]
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-gray);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif; /* Fonte padrão para leitura */ 
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Fonte elegante para títulos */ 
+    font-weight: 700;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 14px; /* Bordas arredondadas padrão do Manus */ [cite: 2173]
+    border: 1px solid var(--border-soft);
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.08); [cite: 2175]
+}
+
+.button-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s;
+}
